@@ -108,10 +108,9 @@
       labs(x= NULL, y= NULL,
            title= "Texas Industrial Water Usage",
            caption= "Data from TWDB")
-    #send plot to output
-    #print(gg)
-
     
+    #send plot to output
+    plot(gg)
   })     
 
 

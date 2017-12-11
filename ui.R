@@ -45,16 +45,20 @@ shinyUI(fluidPage(theme = shinytheme("cerulean"),
   
   mainPanel(
    tabsetPanel( id= "theTabs",
-      tabPanel("Summary", textOutput("Summary"), 
-               value= "Summary"), 
-      tabPanel("Texas Map",textOutput("TexasMap"),  
-               value= "map" ),
-      tabPanel("Historical Trends", plotOutput("HistoricalTrends"),  
-               value= "trends"),
-      tabPanel("Largest Users", DT::dataTableOutput("LargestUsers"),  
-               value= "table"),
-      tabPanel("Credits", textOutput("Credits"), 
-              value= "credits")
+      tabPanel("Summary", 
+               textOutput("Summary")), 
+      
+      tabPanel("Texas Map",
+               plotOutput("TexasMap")),
+      
+      tabPanel("Historical Trends", 
+               plotOutput("HistoricalTrends")),
+      
+      tabPanel("Largest Users", 
+               DT::dataTableOutput("LargestUsers")),
+      
+      tabPanel("Credits", 
+               textOutput("Credits"))
   )
  )
 ))
